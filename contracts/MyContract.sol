@@ -21,4 +21,17 @@ contract MyContract{
         uint value = 1;
         return value;
     }
+
+    // Arrays
+    uint[] public uintArray = [1, 2, 3];
+    string[] public stringArray = ["aaa", "bbb", "ccc"];
+    string[] public values;
+
+    function addValue(string memory _value) public {
+        values.push(_value);
+    }
+
+    function valueCount() public view returns(uint){
+        return values.length;
+    }
 }
